@@ -1,43 +1,35 @@
 <template>
   <div id="app">
     <div class="container-fluid">
-      <div class="row">
-        
-        
+      <div class="row justify-content-center pt-5">
+
+        <div class="col-md-3 offset-col-md-3">
+          <appInput />
+        </div>
+
+        <div class="col-md-3">
+          <appList />
+        </div>
+
       </div>
     </div>
   </div>
 </template>
 <script>
-  
+  import Input from './components/ExpenseInput.vue'
+  import List from './components/ExpenseList.vue'
   export default {
     data() {
       return {
-        message: "fuck this framework"
       }
+    },
+    components: {
+      appInput: Input,
+      appList: List
     }
   }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
