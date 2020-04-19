@@ -5,27 +5,36 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-  list: []
-  },
-  mutations: {
-  'ENTER_ITEM' (state, { name, price }) {
-  state.list.push({
-  name: name,
-  price: price
-  });
-  console.log(state.list)
-  }
-  },
-  actions: {
-  submitItem({commit}, payload) {
-  commit('ENTER_ITEM', payload);
-  }
+  projects: [
+    {
+      id: 1,
+      name: 'Substance' ,
+      category: 'Digital' ,
+      tags: 'Art Challenge',
+      description: '#march of robots ',
+      source: '../../../Artchallenges/substance.jpg',
+    },
+    {
+      id: 2,
+      name: 'Bomb 1' ,
+      category: 'Digital' ,
+      tags: 'Art Challenge',
+      description: '#march of robots',
+      source: '../../../Artchallenges/bomb 1.jpg',
+    },
+    {
+      id: 3,
+      name: 'Death and Milk Samurai Cyborg' ,
+      category: 'Digital' ,
+      tags: 'Art Challenge',
+      description: '#march of robots',
+      source: '../../../Artworks; DTIYS/deathandmilk-samurai-cyborg 4.jpg',
+    },
+  ]
   },
   getters: {
-  expenses(state){
-  
-  return state.list;
-  
+  projects(state){
+  return state.projects;
   }
   }
 

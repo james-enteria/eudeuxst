@@ -1,35 +1,26 @@
 <template>
-  <div id="app">
-    <div class="container-fluid">
-      <div class="row justify-content-center pt-5">
-
-        <div class="col-md-3 offset-col-md-3">
-          <appInput />
-        </div>
-
-        <div class="col-md-3">
-          <appList />
-        </div>
-
-      </div>
-    </div>
+  <div class="container-fluid p-0 ">
+    <app-header />
+    <app-banner />
+    <app-projects />
   </div>
 </template>
+
 <script>
-  import Input from './components/ExpenseInput.vue'
-  import List from './components/ExpenseList.vue'
+  import Header from './components/Header.vue'
+  import Banner from './components/Banner.vue'
+  import Projects from './components/Projects.vue'
   export default {
-    data() {
-      return {
-      }
-    },
     components: {
-      appInput: Input,
-      appList: List
+      appHeader: Header,
+      appBanner: Banner,
+      appProjects: Projects
     }
   }
 </script>
 
-<style lang="scss">
-
+<style>
+  .container-fluid{
+  overflow: hidden;
+}
 </style>
