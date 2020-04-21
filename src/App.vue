@@ -2,7 +2,10 @@
   <div class="container-fluid p-0 ">
     <app-header />
     <app-banner />
-    <app-projects />
+    <transition>
+      
+      <app-projects/>
+    </transition>
   </div>
 </template>
 
@@ -23,4 +26,6 @@
   .container-fluid{
   overflow: hidden;
 }
+
+
 </style>
