@@ -6,22 +6,28 @@
 			</div>
 		</div>
 
+
 		<div class="row text-center no-gutters">
 			
 			<div class="col-12">
-				<h4><span><i class="fab fa-instagram"></i></span> eudeuxst</h4>
-			</div>
-		</div>
-
-		<div class="row text-center">
-
-			<div class="col-12 no-gutters">
-				<h4><span><i class="far fa-envelope"></i></span> eudeuxst.studio@gmail.com</h4>
+				<h4>freelance graphic artist</h4>
 			</div>
 
 		</div>
+
+		<app-projects></app-projects>
 	</div>
 </template>
+
+<script>
+	import Projects from './Projects.vue'
+
+	export default {
+		components: {
+			appProjects: Projects
+		}
+	}
+</script>
 
 <style scoped>
 
@@ -37,14 +43,15 @@
 
 
 	h1 {
-		font-family: Nexa;
-		letter-spacing: 1vw;
-		font-size: 2.8em;
+		font-family: Nexa, sans-serif;
+		letter-spacing: 1.5vw;
+		margin-right: -1.5vw;
+		font-size: 2.3em;
 	}
 
 	h4 {
-		font-family: Dense;
+		font-family: Dense, sans-serif;
 		letter-spacing: 0.05em ;
-		font-size: 1.4em;
+		font-size: 1.2em;
 	}
 </style>

@@ -11,6 +11,8 @@ Vue.filter('currency', (value)=>{
 	return 'Php' + value.toLocaleString();
 })
 
+
+
 new Vue({
   vuetify,
   router,
