@@ -1,7 +1,7 @@
 
 
 <template>
-	<div>
+	
 		<v-hover>
 			<template v-slot:default="{ hover }">
 				<div class="col-sm-4 col-12" >
@@ -17,9 +17,9 @@
 			</template>
 		</v-hover>
 
+
 		
-		
-	</div>
+	
 	
 		
 	
