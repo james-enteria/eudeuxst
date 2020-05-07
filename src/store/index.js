@@ -19,7 +19,7 @@ export const store = new Vuex.Store({
     },
     {
       id: 2,
-      name: 'Ventress Fanfique' ,
+      name: 'Ventress' ,
       category: 'Digital' ,
       tags: 'Art Challenge',
       description: 'Fanfique',
