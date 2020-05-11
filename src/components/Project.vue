@@ -9,30 +9,44 @@
 					<v-fade-transition>
 						<v-overlay v-if="hover" absolute :opacity="0.90" class="text-center">
 							<h1>{{project.name}}</h1>
-							<p style="cursor: pointer;">-click for more info-</p>
+							<v-btn @click="alertMe" light data-toggle="modal" :data-target="'#modal'+ project.id" >click me for info </v-btn>
+
 						</v-overlay>
 					</v-fade-transition>
-					
+					<div class="modal fade" :id="'#modal'+ project.id" tabindex="-1" role="dialog"  aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Area PE 1</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              
+            </div>
+          </div>
+        </div>  
 				</div>
 			</template>
-		</v-hover>
-
-
+			<!-- <project-modal></project-modal> -->
+     
 		
-	
-	
+		</v-hover>
 		
 	
 	
 </template>
 
-<script>	
+<script>
+// import ProjectModal from './ProjectModal.vue'
+
 export default {
 	props: ['project'],
 	data() {
 		return {
 			absolute: true,
-			overlay: false
+			overlay: false,
+			dialog: false
 		}
 	},
 	methods: {
@@ -40,8 +54,15 @@ export default {
 			setTimeout(()=> {
 				return false;
 			}, 2000)
+		},
+		alertMe(){
+			console.log('#modal' + this.project.id)
 		}
 	}
+	// },
+	// components: {
+	// 	projectModal: ProjectModal
+	// }
     
 }
 </script>

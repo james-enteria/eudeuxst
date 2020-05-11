@@ -3,8 +3,9 @@
     
   <div class="container-fluid p-0 ">
     <app-header />
-    
+
     <v-content>
+      <app-banner />
       <v-scale-transition mode="out-in" origin="center center">
         
         <router-view></router-view> 
@@ -19,10 +20,12 @@
 
 <script>
   import Header from './components/Header.vue'
+  import Banner from './components/Banner.vue'
   
   export default {
     components: {
-      appHeader: Header
+      appHeader: Header,
+      appBanner: Banner
     }
   }
 </script>

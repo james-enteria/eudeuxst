@@ -1,8 +1,8 @@
 <template>
   <div class="gallery_img row no-gutters">
     
-        <app-project  v-for="project in projects" :project="project" :key="project.id" @click="alertUs"/>
-
+        <app-project  v-for="project in projects" :project="project" :key="project.id" />
+        
   </div>
 	
 	
@@ -17,12 +17,8 @@
 				'projects'
 			])
 		},
-    methods: {
-      alertUs(){
-        alert('hello')
-      }
-    },
-		components: {
+    components: {
+      
 			appProject: Project
 		}
 	}

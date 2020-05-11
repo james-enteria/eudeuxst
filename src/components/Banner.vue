@@ -15,19 +15,10 @@
 
 		</div>
 
-		<app-projects></app-projects>
+		
 	</div>
 </template>
 
-<script>
-	import Projects from './Projects.vue'
-
-	export default {
-		components: {
-			appProjects: Projects
-		}
-	}
-</script>
 
 <style scoped>
 

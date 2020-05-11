@@ -1,4 +1,5 @@
 <template>
+	
 	<v-app-bar app color="white" fixed elevate-on-scroll scroll-on-target>
 		<v-layout row wrap align-center>
 
@@ -15,7 +16,8 @@
 <script>
 	export default {
 		data: () => ({
-			showThis: true
+			showThis: true,
+			collapseOnScroll: true
 		})
 	}
 </script>
