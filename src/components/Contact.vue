@@ -1,13 +1,13 @@
 <template>
-  <div>
     
 
   <div class="row text-center justify-content-center">
+    <div class="col-md-6">
     
     <v-form
-      ref="form"
-      @submit.prevent="sendEmail"
-      method="post"
+    ref="form" 
+    @submit.prevent="sendEmail"
+    method="post"
       
     >
       <v-text-field
@@ -40,22 +40,23 @@
         ></v-textarea>
 
 
+
       <v-btn
-        :disabled="valid"
-        color="success"
-        class="mr-4"
+        :disabled="loading"
+        class="ma-2"
         type="submit"
-        :loading="valid"
+        color="info"
+        :loading="loading"
+        @click="loader = 'loading'"
       >
         send
       </v-btn>
-
-
-
+    
     </v-form>
-  </div>
+    </div>
 
   </div>
+
 </template>
 
 <script>
@@ -63,6 +64,8 @@ import emailjs from 'emailjs-com';
 
 export default {
   data: () => ({
+      loader: null,
+      loading: false,
       valid: false,
       name: '',
       nameRules: [
@@ -83,8 +86,8 @@ export default {
     sendEmail: (e) => {
       
        //will initiate loading animation on SEND button
-
-      emailjs.sendForm('gmail', 'template_WZgAcJwW', e.target, 'user_mOT0OhVnn157XyTvKqUMY')
+      //this.valid= true;
+      emailjs.sendForm('gmail', 'template_WzgI4IpE', e.target, 'user_MDfHDxFOT2HK1Db0vKyES')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
 
@@ -92,10 +95,21 @@ export default {
             console.log('FAILED...', error);
 
         });
+      //this.valid=false;
       this.name = "";
       this.email = "";
       this.message = "";
     }
-  }
+  },
+  watch: {
+      loader () {
+        const l = this.loader
+        this[l] = !this[l]
+
+        setTimeout(() => (this[l] = false), 5000)
+
+        this.loader = null
+      },
+    }
 }
 </script>
