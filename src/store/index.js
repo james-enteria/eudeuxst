@@ -22,7 +22,7 @@ export const store = new Vuex.Store({
       category: 'Fanatique (Fan Art)' ,
       tags: 'Art Challenge',
       description: 'This is my personal fan art of Ventress from Star Wars.',
-      source: '../../../Characters/Ventress 2.jpg',
+      source: '../../../Fanatique/Ventress 2.jpg',
     },
     {
       id: 3,
@@ -47,7 +47,7 @@ export const store = new Vuex.Store({
       category: 'Fanatique' ,
       tags: '',
       description: 'Here is my take on Miles Morales.',
-      source: '../../../Characters/miles-morales.jpg',
+      source: '../../../Fanatique/miles-morales.jpg',
     },
     {
       id: 6,
@@ -119,7 +119,7 @@ export const store = new Vuex.Store({
       category: 'Timeless (Collection of Other Worlds/Stories)' ,
       tags: '',
       description: '',
-      source: '../../../Characters/Quiver-power2.jpg',
+      source: '../../../Timeless/Quiver-power2.jpg',
     },
     {
       id: 15,
